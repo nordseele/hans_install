@@ -6,7 +6,7 @@ sudo cp /home/pi/hans_install/files/hans.service /etc/systemd/system
 
 sudo systemctl enable hans
 
-sudo apt-get install libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev libasound2-dev pigpio -y
+sudo apt-get install libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev libasound2-dev -y
 
 #MIDI 
 cd && git clone https://github.com/nordseele/ttymidi.git
@@ -35,13 +35,13 @@ sudo raspi-config nonint do_expand_rootfs
 
 
 # NETWORK ? :-/
-sudo apt-get install comitup -y
-sudo systemctl disable systemd-resolved
-sudo rm /etc/wpa_supplicant/wpa_supplicant.conf
-sudo systemctl mask dnsmasq.service
+#sudo apt-get install comitup -y
+#sudo systemctl disable systemd-resolved
+#sudo rm /etc/wpa_supplicant/wpa_supplicant.conf
+#sudo systemctl mask dnsmasq.service
 
-sudo sh -c "echo 'ap_name: hans' >> /etc/comitup.conf"
-sudo sh -c "echo 'ap_password: hhhhhhhh' >> /etc/comitup.conf"
+#sudo sh -c "echo 'ap_name: hans' >> /etc/comitup.conf"
+#sudo sh -c "echo 'ap_password: hhhhhhhh' >> /etc/comitup.conf"
 
 
 sudo raspi-config nonint do_hostname hans
