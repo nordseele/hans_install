@@ -10,7 +10,7 @@ cd && git clone https://github.com/nordseele/hans_install.git
 
 #MIDI 
 cd && git clone https://github.com/moddevices/mod-ttymidi.git
-cd ttymidi
+cd mod-ttymidi
 make
 sudo make install
 
