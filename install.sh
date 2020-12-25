@@ -1,12 +1,12 @@
 #!/bin/sh
 
-sudo apt update -y
-
-sudo SKIP_WARNING=1 rpi-update
+sudo apt-get update && apt-get upgrade -y
 
 PACKAGES="libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev libasound2-dev git"
 
 sudo apt-get install $PACKAGES -y
+
+cd && git clone https://github.com/nordseele/hans_install.git 
 
 #MIDI 
 cd && git clone https://github.com/nordseele/ttymidi.git
@@ -35,6 +35,6 @@ sudo raspi-config nonint do_expand_rootfs
 sudo raspi-config nonint do_hostname hans
 
 #RUST
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 sudo reboot
