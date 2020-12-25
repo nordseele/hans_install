@@ -39,18 +39,9 @@ ssh pi@raspberrypi.local
 The whole install process is now scripted.
 
 ```shell
-wget https://raw.githubusercontent.com/nordseele/hans/master/install.sh
+wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
 chmod +x install.sh && ./install.sh
 ```
-
-(Raspberry pi 3, for dev only)
-
-```shell
-sudo apt install git -y
-wget https://raw.githubusercontent.com/nordseele/hans/master/install_arm7.sh
-chmod +x install_arm7.sh && ./install_arm7.sh
-```
-
 
 Once the script has started, it will take approx. 30 minutes to update the pi, install things, etc... At the very end, you will be disconnected. Wait until the RPI reboots and the network "hans" shows up in the list of SSID. 
 
