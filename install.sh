@@ -2,14 +2,14 @@
 
 sudo apt-get update && apt-get upgrade -y
 
-PACKAGES="libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev libasound2-dev git"
+PACKAGES="libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev git"
 
 sudo apt-get install $PACKAGES -y
 
 cd && git clone https://github.com/nordseele/hans_install.git 
 
 #MIDI 
-cd && git clone https://github.com/nordseele/ttymidi.git
+cd && git clone https://github.com/moddevices/mod-ttymidi.git
 cd ttymidi
 make
 sudo make install
@@ -36,5 +36,7 @@ sudo raspi-config nonint do_hostname hans
 
 #RUST
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+#TODO => ADD hans binary and Hans service
 
 sudo reboot
