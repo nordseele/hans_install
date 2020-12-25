@@ -1,13 +1,12 @@
+
 [Unit]
 Description=Hans
-After=network.target
+After=multi-user.target
 
 [Service]
-WorkingDirectory=/home/pi/hans
-ExecStart=/usr/local/bin/npm start
-Restart=on-failure
-User=pi
-Environment=PORT=8000
+ExecStart=/home/pi/hans
+Restart=always
+RestartSec=10s
 
 [Install]
 WantedBy=multi-user.target
