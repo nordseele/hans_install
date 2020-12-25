@@ -4,7 +4,7 @@ Description=Hans
 After=multi-user.target
 
 [Service]
-ExecStart=/home/pi/hans
+ExecStart=/home/pi/hans_rust/release
 Restart=always
 RestartSec=10s
 
