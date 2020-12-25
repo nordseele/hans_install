@@ -30,9 +30,9 @@ sudo cp /home/pi/hans_install/files/cmdline.txt /boot
 sudo raspi-config nonint do_i2c 0
 sudo cp /home/pi/hans_install/files/config.txt /boot/config.txt
 
+sudo raspi-config nonint do_hostname hans
 sudo raspi-config nonint do_expand_rootfs
 
-sudo raspi-config nonint do_hostname hans
 
 #RUST
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
