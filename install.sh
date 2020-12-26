@@ -31,7 +31,7 @@ sudo cp /home/pi/hans_install/files/config.txt /boot/config.txt
 sudo raspi-config nonint do_hostname hans
 sudo raspi-config nonint do_expand_rootfs
 
-sudo sed -i 's/console=serial0,115200//' cmdline.txt
+sudo sed -i 's/console=serial0,115200 //' /boot/cmdline.txt
 
 #RUST
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
