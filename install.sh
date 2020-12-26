@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get update && apt-get upgrade -y
+sudo apt update
 
 PACKAGES="libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev git"
 
