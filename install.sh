@@ -21,8 +21,8 @@ sudo apt install ./amidiauto-1.01_buster.deb
 sudo cp /home/pi/hans_install/files/amidiauto.conf /etc/amidiauto.conf
 sudo systemctl enable amidiauto
 
-sudo cp /home/pi/hans_install/files/mod-ttymidi.service /etc/systemd/system/mod-ttymidi.service
-sudo systemctl enable mod-ttymidi.service
+sudo cp /home/pi/hans_install/files/ttymidi.service /etc/systemd/system/ttymidi.service
+sudo systemctl enable ttymidi.service
 
 #I2C
 sudo raspi-config nonint do_i2c 0
