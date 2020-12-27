@@ -1,8 +1,6 @@
 # Software install
 
-
-## Part 1. Headless RPI setup
-Use the Raspberry Pi Imager to instal Raspberry Pi OS <u>Lite</u> on your SD card. 
+Use the Raspberry Pi Imager to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. 
 
 https://www.raspberrypi.org/downloads/
 

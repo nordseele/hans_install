@@ -37,5 +37,6 @@ sudo sed -i 's/console=serial0,115200 //' /boot/cmdline.txt
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 #TODO => ADD hans binary and Hans service
+        # ADD MIDI OVER BLE INSTRUCTIONS
 
 sudo reboot
