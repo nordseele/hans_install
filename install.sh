@@ -2,7 +2,7 @@
 
 sudo apt update
 
-PACKAGES="libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev git"
+PACKAGES="libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev pigpio git"
 
 sudo apt-get install $PACKAGES -y
 
