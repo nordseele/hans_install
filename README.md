@@ -1,6 +1,7 @@
-### Incomplete | draft | do not use
+## INCOMPLETE / DO NOT USE 
+Todo  -> add compiling instructions 
 
-# Software install
+### Software install
 
 Use the Raspberry Pi Imager to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. 
 
@@ -45,7 +46,6 @@ chmod +x install.sh && ./install.sh
 ```
 
 ## Notes
-
 
 If you want to prevent Hans from starting automatically, use: `sudo systemctl disable hans` 
 
