@@ -1,5 +1,4 @@
-## INCOMPLETE / DO NOT USE 
-Todo  -> add compiling instructions 
+Todo  => compile and add binary
 
 ### Software install
 
@@ -44,6 +43,15 @@ The whole install process is now scripted.
 wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
 chmod +x install.sh && ./install.sh
 ```
+
+#### Optional: install Rust if you want to edit the code and compile it.
+
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+Compiling: from the hans directory run
+
+`cargo build --release`
+
 
 #### Notes
 
