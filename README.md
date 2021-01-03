@@ -45,7 +45,7 @@ wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
 chmod +x install.sh && ./install.sh
 ```
 
-## Notes
+#### Notes
 
 If you want to prevent Hans from starting automatically, use: `sudo systemctl disable hans` 
 
@@ -56,3 +56,10 @@ Start: `sudo systemctl start hans`
 Stop: `sudo systemctl stop hans`
 
 journalctl -u hans
+
+
+#### Bill of material REV C
+
+[Bom rev C](bom_revC.md)
+
+https://octopart.com/bom-tool/wrAAEbXP
