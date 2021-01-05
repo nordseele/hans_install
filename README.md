@@ -2,11 +2,13 @@ Todo  => compile and add binary
 
 ### Software install
 
-Use the Raspberry Pi Imager to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. 
+Use the Raspberry Pi Imager to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. (under Raspberry Os - Other)
 
 https://www.raspberrypi.org/downloads/
 
-Mount the SD Card and 
+At the end of the process 
+
+Mount the SD Card again, open a terminal and in enter the following command:
 
 ```shell
 cd /volumes/boot && touch ssh
@@ -16,11 +18,11 @@ cd /volumes/boot && touch ssh
 
 #### Connection over Wifi 
 
-Then we need to create a *WPA_supplicant.conf* file. It contains your network info. Follow these instructions: 
+We need to create a *WPA_supplicant.conf* file. It contains your network info. Follow these instructions: 
 
-https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
+https://www.raspberrypi.org/documentation/configuration/wireless/headless.md or use this website https://steveedson.co.uk/tools/wpa/ to create a file directly.
 
-and drop the file at the root of the sd card. 
+Drop the file at the root of the sd card ("Boot") 
 
 Eject the card, put it in the Raspberry Pi and power the Pi up.
 
