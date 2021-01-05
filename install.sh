@@ -9,8 +9,8 @@ sudo apt-get install $PACKAGES -y
 cd && git clone https://github.com/nordseele/hans_install.git 
 
 #MIDI 
-cd && git clone https://github.com/nordseele/ttymidi.git
-cd ttymidi
+cd && git clone https://github.com/nordseele/tty.git
+cd tty
 make
 sudo make install
 
