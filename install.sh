@@ -34,7 +34,7 @@ sudo raspi-config nonint do_expand_rootfs
 sudo sed -i 's/console=serial0,115200 //' /boot/cmdline.txt
 
 #RUST
-#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 #TODO => ADD hans binary and Hans service
 
