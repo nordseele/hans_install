@@ -14,7 +14,7 @@ cd tty
 make
 sudo make install
 
-cd 
+cd
 
 wget https://github.com/antiprism/amidiauto/releases/download/v1.01Raspbian/amidiauto-1.01_buster.deb
 sudo apt install ./amidiauto-1.01_buster.deb
