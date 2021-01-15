@@ -18,15 +18,25 @@ cd /volumes/boot && touch ssh
 
 #### Connection over Wifi 
 
-We need to create a *WPA_supplicant.conf* file. It contains your network info. Follow these instructions: 
+We need to create a *WPA_supplicant.conf* file:
 
-https://www.raspberrypi.org/documentation/configuration/wireless/headless.md or use this website https://steveedson.co.uk/tools/wpa/ to create a file directly.
+Open a text editor and paste the following lines. Edit the name of your wifi router and your wifi key (keep the " ") and replace the ISO name of the country. 
 
-Drop the file at the root of the sd card ("Boot") 
+**Important: This file must have a ***.conf*** extension.** (Windows, might force a .txt extension, you'll have to navigate to the Win folder settings and uncheck the option "Hide known file type extensions" before you being able to remove the .txt extension)
+
+    country=se
+    update_config=1
+    ctrl_interface=/var/run/wpa_supplicant
+    network={
+    scan_ssid=1
+    ssid="Name of your router"
+    psk="Your key"
+    }
+
+
+Save the file and drop it at the root of the sd card (partition named "Boot").
 
 Eject the card, put it in the Raspberry Pi and power the Pi up.
-
-(If you prefer, you can connect the Pi Zero W using a micro USB to Ethernet adaptor/hub or using its OTG capability.)
 
 
 Open a terminal window and connect to the Raspberry Pi via SSH. The password is "raspberry".
