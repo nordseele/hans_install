@@ -81,6 +81,8 @@ Stop: `sudo systemctl stop hans`
 
 journalctl -u hans
 
+____ 
+
 
 #### Bill of material REV C
 
