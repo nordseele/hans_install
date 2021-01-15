@@ -1,6 +1,6 @@
 Todo  => compile and add binary
 
-### Software install
+### 1 - Software install
 
 Use the Raspberry Pi Imager to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. (under Raspberry Os - Other)
 
@@ -16,11 +16,11 @@ cd /volumes/boot && touch ssh
 
 
 
-#### Connection over Wifi 
+#### A - Connection over Wifi 
 
 We need to create a *WPA_supplicant.conf* file:
 
-Open a text editor and paste the following lines. Edit the name of your wifi router and your wifi key (keep the " ") and replace the ISO name of the country. 
+Open a text editor and paste the following lines. Edit the name of your wifi router and your wifi key (keep the " ") and replace the ISO country code. 
 
 **Important: This file must have a ***.conf*** extension.** (Windows, might force a .txt extension, you'll have to navigate to the Win folder settings and uncheck the option "Hide known file type extensions" before you being able to remove the .txt extension)
 
@@ -47,7 +47,7 @@ ssh pi@raspberrypi.local
 
 `ssh-keygen -R raspberrypi.local` if you encounter an "host/key verification" error. Note that it can take a few minutes until the pi connects to your wifi network. Check with Lanscan when it's connected and ready.
 
-#### Environment and configuration
+#### B - Environment and configuration
 
 The whole install process is now scripted.
 
@@ -65,6 +65,10 @@ Compiling: from the hans directory run
 `cargo build --release`
 
 
+
+
+
+___
 #### Notes
 
 If you want to prevent Hans from starting automatically, use: `sudo systemctl disable hans` 
@@ -83,3 +87,18 @@ journalctl -u hans
 [Bom rev C](bom_revC.md)
 
 https://octopart.com/bom-tool/wrAAEbXP
+
+
+____
+
+#### Additional ressources
+
+##### 1 - A
+
+- https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
+
+- https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
+
+- https://learn.adafruit.com/adafruits-raspberry-pi-lesson-6-using-ssh/ssh-under-windows
+
+- https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
