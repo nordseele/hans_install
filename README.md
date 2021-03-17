@@ -71,9 +71,9 @@ Connect via SSH from a terminal -> ssh pi@hans.local (password: raspberry)
 ```
 sudo bluetoothctl
  	scan on 
-	devices (copy the address of your device)
+	devices (copy the MAC address of your device)
 
-	connect 48:B6:20:03:18:5B (replace the MAC addres with yours)
+	connect 48:B6:20:03:18:5B (replace the address with yours)
     exit
 ```
 
