@@ -75,7 +75,7 @@ sudo bluetoothctl
 
 	connect 48:B6:20:03:18:5B (replace the MAC addres with yours)
     exit
-
+```
 
 test: aconnect -i (check if your ble device is listed here, amidiauto should connect it to all Midi routes available)
 
