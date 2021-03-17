@@ -65,7 +65,19 @@ Compiling: from the hans directory run
 `cargo build --release`
 
 
+#### Bluetooth
 
+Connect via SSH from a terminal -> ssh pi@hans.local (password: raspberry)
+```
+sudo bluetoothctl
+ 	scan on 
+	devices (copy the address of your device)
+
+	connect 48:B6:20:03:18:5B (replace the MAC addres with yours)
+    exit
+
+
+test: aconnect -i (check if your ble device is listed here, amidiauto should connect it to all Midi routes available)
 
 
 ___
