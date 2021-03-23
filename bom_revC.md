@@ -21,3 +21,4 @@
 
 
 R3 and R6 (Midi out) can be replaced with 51 ohms resistors. 
+Alt fuse: MF-MSMF250/16X-2
