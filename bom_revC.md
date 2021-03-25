@@ -22,3 +22,4 @@
 
 Opt:  two 51 ohms resistors. 
 Alt fuse: MF-MSMF250/16X-2
+https://www.midi.org/specifications-old/item/midi-din-electrical-specification
