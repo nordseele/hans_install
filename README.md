@@ -2,39 +2,18 @@ Todo  => compile and add binary
 
 ### 1 - Software install
 
-Use the Raspberry Pi Imager to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. (under Raspberry Os - Other)
+Use the Raspberry Pi Imager (minimum version: 1.6) to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. (under Raspberry Os - Other)
 
 https://www.raspberrypi.org/downloads/
 
-At the end of the process 
+Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win) to :
 
-Mount the SD Card again, open a terminal and in enter the following command:
+- Enable SSH 
+- Add your WIFI Details
+- Change Locale and country
+- You can leave the hostname to raspberrypi. The install script will change that later. 
 
-```shell
-cd /volumes/boot && touch ssh
-```
-
-
-
-#### A - Connection over Wifi 
-
-We need to create a *WPA_supplicant.conf* file:
-
-Open a text editor and paste the following lines. Edit the name of your wifi router and your wifi key (keep the " ") and replace the ISO country code. 
-
-**Important: This file must have a ***.conf*** extension.** (Windows, might force a .txt extension, you'll have to navigate to the Win folder settings and uncheck the option "Hide known file type extensions" before you being able to remove the .txt extension)
-
-    country=se
-    update_config=1
-    ctrl_interface=/var/run/wpa_supplicant
-    network={
-    scan_ssid=1
-    ssid="Name of your router"
-    psk="Your key"
-    }
-
-
-Save the file and drop it at the root of the sd card (partition named "Boot").
+Write the image to your SD
 
 Eject the card, put it in the Raspberry Pi and power the Pi up.
 
