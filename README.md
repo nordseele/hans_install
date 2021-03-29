@@ -4,17 +4,16 @@ Use the Raspberry Pi Imager (minimum version: 1.6) to instal Raspberry Pi OS <u>
 
 https://www.raspberrypi.org/downloads/
 
-Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win) to :
+Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win), this will open a new window, make the following changes:
 
-- Enable SSH 
-- Add your WIFI Details
+- Check "Enable SSH" 
+- Enter your WIFI network Details
 - Change Locale and country
-- You can leave the hostname to raspberrypi. The install script will change that later. 
+- You can leave the hostname to raspberrypi. The install script will modify this to "hans" later. 
 
-Write the image to your SD
+Hit the "Write" button to start writing the image to your SD. It takes a few minutes.
 
-Eject the card, put it in the Raspberry Pi and power the Pi up.
-
+At the end of the process, RPI imager will unmount the card. Put it in the Raspberry Pi and power the Pi up.
 
 Open a terminal window and connect to the Raspberry Pi via SSH. The password is "raspberry".
 
@@ -32,15 +31,6 @@ The whole install process is now scripted.
 wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
 chmod +x install.sh && ./install.sh
 ```
-
-#### Optional: install Rust if you want to edit the code and compile it.
-
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-Compiling: from the hans directory run
-
-`cargo build --release`
-
 
 #### Bluetooth
 
