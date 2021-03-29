@@ -1,5 +1,3 @@
-Todo  => compile and add binary
-
 ### 1 - Software install
 
 Use the Raspberry Pi Imager (minimum version: 1.6) to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. (under Raspberry Os - Other)
