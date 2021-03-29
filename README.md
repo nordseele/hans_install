@@ -32,6 +32,8 @@ wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
 chmod +x install.sh && ./install.sh
 ```
 
+This script doesn't compile nor install Hans_Rust and Hans_ii_midi. This needs to be done separately.
+
 #### Bluetooth
 
 Connect via SSH from a terminal -> ssh pi@hans.local (password: raspberry)
