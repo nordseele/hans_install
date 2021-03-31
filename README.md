@@ -32,7 +32,12 @@ wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
 chmod +x install.sh && ./install.sh
 ```
 
-This script doesn't compile nor install Hans_Rust and Hans_ii_midi. This needs to be done separately.
+This script doesn't compile nor install Hans_Rust and Hans_ii_midi. This needs to be done separately, the instructions are available in their respective folders
+
+https://github.com/nordseele/hans_ii_midi_c (for Teletype to MIDI)
+
+
+
 
 #### Bluetooth
 
