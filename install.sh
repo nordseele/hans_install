@@ -3,6 +3,7 @@
 # Hans install script
 
 function fresh_start() {
+    sudo apt-get install -y git
 
     if [[ -d /home/pi/hans_install ]]
     then
@@ -15,7 +16,7 @@ function fresh_start() {
 function install_dependencies() {
     echo "Installing dependencies"
     sudo apt update
-    PACKAGES="libdbus-1-dev libglib2.0-dev libusb-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev git autotools-dev libtool autoconf pigpio amidiauto"
+    PACKAGES="libdbus-1-dev libglib2.0-dev libusb-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev autotools-dev libtool autoconf pigpio amidiauto"
     sudo apt-get install -y $PACKAGES
 
     #MIDI 
