@@ -15,7 +15,7 @@ function fresh_start() {
 function install_dependencies() {
     echo "Installing dependencies"
     sudo apt update
-    PACKAGES="libdbus-1-dev libglib2.0-dev libusb-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev git autotools-dev libtool autoconf pigpio"
+    PACKAGES="libdbus-1-dev libglib2.0-dev libusb-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev git autotools-dev libtool autoconf pigpio amidiauto"
     sudo apt-get install -y $PACKAGES
 
     #MIDI 
@@ -32,8 +32,8 @@ function install_dependencies() {
 
     cd /home/pi
 
-    wget https://github.com/antiprism/amidiauto/releases/download/v1.01Raspbian/amidiauto-1.01_buster.deb
-    sudo apt install ./amidiauto-1.01_buster.deb
+    // wget https://github.com/antiprism/amidiauto/releases/download/v1.01Raspbian/amidiauto-1.01_buster.deb
+    // sudo apt install ./amidiauto-1.01_buster.deb
     sudo cp /home/pi/hans_install/files/amidiauto.conf /etc/amidiauto.conf
     sudo systemctl enable amidiauto
 
