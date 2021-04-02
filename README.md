@@ -1,8 +1,14 @@
-### Hans environment install
+## Hans environment install
 
-Use the Raspberry Pi Imager (minimum version: 1.6) to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. (under Raspberry Os - Other)
+#### 1 ) 
+
+Download the Raspberry Pi Imager (minimum version: 1.6) to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card.
 
 https://www.raspberrypi.org/downloads/
+
+Select the 32bit (Lite) Raspberry PI OS. (Other versions -> RPI Lite)
+
+#### 2 ) 
 
 Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win), this will open a new window, make the following changes:
 
@@ -15,25 +21,21 @@ Press the "Write" button to start writing the image to your SD. It will take a f
 
 At the end of the process, RPI imager will unmount the card. Put it in the Raspberry Pi and power the Pi up.
 
+#### 3 )
+
 Open a terminal window and connect to the Raspberry Pi via SSH. The password is "raspberry".
 
 ```shell
 ssh pi@raspberrypi.local 
 ```
-
-
-The whole install process is now scripted.
+#### 4 ) 
 
 ```shell
 wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
 chmod +x install.sh && ./install.sh
 ```
 
-This script doesn't compile nor install Hans_Rust and Hans_ii_midi. This needs to be done separately, the instructions are available in their respective folders
-
-https://github.com/nordseele/hans_ii_midi_c (for Teletype to MIDI)
-
-
+Press enter to proceed with the full install or select a custom option.
 
 
 ___
