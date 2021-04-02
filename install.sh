@@ -51,7 +51,7 @@ function install_dependencies() {
 
 
 function install_iimidi() {
-    echo "Installing hans_ii_midi (Teletype to Midi)"
+    echo "Installing hans_ii_midi - Teletype to Midi"
     cd /home/pi
     git clone https://github.com/nordseele/hans_ii_midi_c.git
     cd /home/pi/hans_ii_midi_c
@@ -62,7 +62,7 @@ function install_iimidi() {
 }
 
 function install_ii() {
-    echo "Installing hans_rust (ER301, Txo, etc)"
+    echo "Installing hans_rust - ER301, Txo, etc"
     cd /home/pi
     git clone https://github.com/nordseele/hans_rust.git
     cd /home/pi/hans_rust
