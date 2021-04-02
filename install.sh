@@ -1,16 +1,14 @@
 #! /bin/bash
 
 # test bash
- 
-echo ============
-echo
-echo Hans install 
-echo
-echo ============
-
-echo
 
 function fresh_start() {
+
+    if [[ -d /hans_install ]]
+    then
+        sudo rm -f -R /home/pi/hans_install
+    fi
+
     cd /home/pi && git clone https://github.com/nordseele/hans_install.git 
 }
 
@@ -21,6 +19,12 @@ function install_dependencies() {
     sudo apt-get install -y $PACKAGES
 
     #MIDI 
+
+    if [[ -d /tty ]]
+    then
+        sudo rm -f -R /home/pi/tty
+    fi
+
     cd && git clone https://github.com/nordseele/tty.git
     cd /home/pi/tty
     make
@@ -45,13 +49,25 @@ function install_dependencies() {
 
     sudo sed -i 's/console=serial0,115200 //' /boot/cmdline.txt
 
+
     #RUST
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    if which rustc > /dev/null
+    then
+        echo "Rust is already installed, skipping..."
+    else
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    fi
 }
 
 
 function install_iimidi() {
     echo "Installing hans_ii_midi - Teletype to Midi"
+
+    if [[ -d /home/pi/hans_ii_midi_c ]]
+    then
+        sudo rm -f -R /home/pi/hans_ii_midi_c
+    fi
+
     cd /home/pi
     git clone https://github.com/nordseele/hans_ii_midi_c.git
     cd /home/pi/hans_ii_midi_c
@@ -63,7 +79,14 @@ function install_iimidi() {
 
 function install_ii() {
     echo "Installing hans_rust - ER301, Txo, etc"
+
+    if [[ -d /home/pi/hans_rust ]]
+    then
+        sudo rm -f -R /home/pi/hans_rust
+    fi
+
     cd /home/pi
+
     git clone https://github.com/nordseele/hans_rust.git
     cd /home/pi/hans_rust
     cargo build
@@ -120,16 +143,33 @@ function cleanup() {
     sudo rm -f -R /home/pi/tty
 }
 
+function update() {
+    cd /home/pi/hans_rust
+    git pull
+    cd /home/pi/hans_ii_midi
+    git pull
+    cd
+}
 
+function hello() {
+echo ============
+echo
+echo Hans install 
+echo
+echo ============
+
+echo
+}
 
 menu(){
+hello
 echo -ne "
-Hans install
 1) Full install
 2) Install without support for Teletype
 3) Install without support for Er-301 and Txo
 4) Remove services
 5) Clean up
+6) Update
 0) Exit
 Choose an option: "
         read a
@@ -139,6 +179,7 @@ Choose an option: "
 	        3) full_install_noSC ;;
 	        4) no_services ;;
 	        5) cleanup ;;
+	        6) update ;;
 			0) exit 0 ;;
 			*) full_install ; exit 0;
         esac
