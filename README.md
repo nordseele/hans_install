@@ -19,9 +19,15 @@ Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win), thi
 
 Press the "Write" button to start writing the image to your SD. It will take a few minutes.
 
-At the end of the process, RPI imager will unmount the card. Put it in the Raspberry Pi and power the Pi up.
+At the end of the process, RPI imager will unmount the card. 
+
+Put it in the Raspberry Pi and power the Pi up. 
+
+Note: Don't try to remove the Pi from its 3d printed case when the SD card is still present in the slot. You may damage it.
 
 #### 3) SSH into the PI from a terminal
+
+It may take a few minutes the first time until the Pi shows up on the network.
 
 Open a terminal window and connect to the Raspberry Pi via SSH. The password is "raspberry".
 
