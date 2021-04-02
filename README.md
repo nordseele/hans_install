@@ -47,7 +47,7 @@ wget --no-cache https://raw.githubusercontent.com/nordseele/hans_install/main/in
 chmod +x install.sh && ./install.sh
 ```
 
-Press enter to proceed with the full install or select a custom option.
+Press enter to proceed with the full install or select a custom option. Installing Rust and compiling Hans_rust will take approx. 20 minutes.
 
 
 ___
