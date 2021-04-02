@@ -1,6 +1,6 @@
-## Hans environment install
+## Installing the software environment 
 
-#### 1 ) 
+#### 1) Raspberry Pi OS
 
 Download the Raspberry Pi Imager (minimum version: 1.6) to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card.
 
@@ -8,7 +8,7 @@ https://www.raspberrypi.org/downloads/
 
 Select the 32bit (Lite) Raspberry PI OS. (Other versions -> RPI Lite)
 
-#### 2 ) 
+#### 2) Network settings and SSH
 
 Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win), this will open a new window, make the following changes:
 
@@ -21,14 +21,14 @@ Press the "Write" button to start writing the image to your SD. It will take a f
 
 At the end of the process, RPI imager will unmount the card. Put it in the Raspberry Pi and power the Pi up.
 
-#### 3 )
+#### 3) SSH into the PI from a terminal
 
 Open a terminal window and connect to the Raspberry Pi via SSH. The password is "raspberry".
 
 ```shell
 ssh pi@raspberrypi.local 
 ```
-#### 4 ) 
+#### 4) Hans install
 
 ```shell
 wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
