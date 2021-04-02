@@ -76,6 +76,8 @@ function no_services() {
     echo Disabling services
     sudo systemctl disable hans.service
     sudo systemctl disable hans_ii_midi.service
+    sudo systemctl disable ttymidi.service
+    sudo systemctl disable amidiauto.service
 }
 
 function reboot() {
@@ -107,6 +109,17 @@ function full_install_noSC() {
     reboot
 }
 
+function cleanup() {
+    sudo systemctl stop hans
+    sudo systemctl stop hans_ii_midi
+    sudo systemctl stop ttymidi
+    no_services
+    sudo rm -f -R /home/pi/hans_ii_midi_c
+    sudo rm -f -R /home/pi/hans_rust
+    sudo rm -f -R /home/pi/hans_install
+    sudo rm -f -R /home/pi/tty
+}
+
 
 
 menu(){
@@ -116,6 +129,7 @@ Hans install
 2) Install without support for Teletype
 3) Install without support for Er-301 and Txo
 4) Remove services
+5) Clean up
 0) Exit
 Choose an option: "
         read a
@@ -124,6 +138,7 @@ Choose an option: "
 	        2) full_install_noTT ;;
 	        3) full_install_noSC ;;
 	        4) no_services ;;
+	        5) cleanup ;;
 			0) exit 0 ;;
 			*) full_install ; exit 0;
         esac
