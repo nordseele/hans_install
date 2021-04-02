@@ -1,4 +1,4 @@
-### 1 - Software install
+### Hans environment install
 
 Use the Raspberry Pi Imager (minimum version: 1.6) to instal Raspberry Pi OS <u>Lite 32bits</u> on your SD card. (under Raspberry Os - Other)
 
@@ -11,7 +11,7 @@ Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win), thi
 - Change Locale and country
 - You can leave the hostname to raspberrypi. The install script will modify this to "hans" later. 
 
-Hit the "Write" button to start writing the image to your SD. It takes a few minutes.
+Press the "Write" button to start writing the image to your SD. It will take a few minutes.
 
 At the end of the process, RPI imager will unmount the card. Put it in the Raspberry Pi and power the Pi up.
 
@@ -21,9 +21,6 @@ Open a terminal window and connect to the Raspberry Pi via SSH. The password is 
 ssh pi@raspberrypi.local 
 ```
 
-`ssh-keygen -R raspberrypi.local` if you encounter an "host/key verification" error. Note that it can take a few minutes until the pi connects to your wifi network. Check with Lanscan when it's connected and ready.
-
-#### B - Environment and configuration
 
 The whole install process is now scripted.
 
@@ -39,7 +36,15 @@ https://github.com/nordseele/hans_ii_midi_c (for Teletype to MIDI)
 
 
 
-#### Bluetooth
+___
+
+### Notes
+
+##### SSH host verification error
+
+`ssh-keygen -R raspberrypi.local` or `ssh-keygen -R hans.local`
+
+##### Bluetooth (WIP)
 
 Connect via SSH from a terminal -> ssh pi@hans.local (password: raspberry)
 ```
@@ -53,11 +58,10 @@ sudo bluetoothctl
 
 test: aconnect -i (check if your ble device is listed here, amidiauto should connect it to all Midi routes available)
 
+##### Services
 
-___
-#### Notes
-
-If you want to prevent Hans from starting automatically, use: `sudo systemctl disable hans` 
+If you want to prevent Hans_ii_midi from starting automatically, use: `sudo systemctl disable hans_ii_midi` 
+If you want to prevent Hans_russt from starting automatically, use: `sudo systemctl disable hans` 
 
 <u>Reminder is you want to start and stop Hans manually:</u>
 
@@ -65,7 +69,7 @@ Start: `sudo systemctl start hans`
 
 Stop: `sudo systemctl stop hans`
 
-journalctl -u hans
+journalctl -u hans 
 
 ____ 
 
@@ -76,17 +80,3 @@ ____
 
 https://octopart.com/bom-tool/wrAAEbXP
 
-
-____
-
-#### Additional ressources
-
-##### 1 - A
-
-- https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
-
-- https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md
-
-- https://learn.adafruit.com/adafruits-raspberry-pi-lesson-6-using-ssh/ssh-under-windows
-
-- https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
