@@ -97,7 +97,7 @@ function install_ii() {
 
     git clone https://github.com/nordseele/hans_rust.git
     cd /home/pi/hans_rust
-    cargo build
+    cargo build --release
     echo Enabling service
     sudo cp /home/pi/hans_install/files/hans.service /etc/systemd/system/
     sudo systemctl enable hans.service
