@@ -4,7 +4,7 @@
 
 function fresh_start() {
 
-    if [[ -d /hans_install ]]
+    if [[ -d /home/pi/hans_install ]]
     then
         sudo rm -f -R /home/pi/hans_install
     fi
