@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# test bash
+# Hans install script
 
 function fresh_start() {
 
