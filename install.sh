@@ -99,7 +99,7 @@ function install_ii() {
     cd /home/pi/hans_rust
     cargo build
     echo Enabling service
-    sudo cp /home/pi/hans_install/hans.service /etc/systemd/system/
+    sudo cp /home/pi/hans_install/files/hans.service /etc/systemd/system/
     sudo systemctl enable hans.service
 }
 
