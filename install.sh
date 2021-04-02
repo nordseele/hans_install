@@ -15,7 +15,7 @@ function fresh_start() {
 }
 
 function install_dependencies() {
-    echo installing dependencies 
+    echo "Installing dependencies"
     sudo apt update
     PACKAGES="libdbus-1-dev libglib2.0-dev libusb-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev git autotools-dev libtool autoconf pigpio"
     sudo apt-get install -y $PACKAGES
@@ -51,7 +51,7 @@ function install_dependencies() {
 
 
 function install_iimidi() {
-    echo Installing hans_ii_midi (Teletype to Midi)
+    echo "Installing hans_ii_midi (Teletype to Midi)"
     cd /home/pi
     git clone https://github.com/nordseele/hans_ii_midi_c.git
     cd /home/pi/hans_ii_midi_c
@@ -62,7 +62,7 @@ function install_iimidi() {
 }
 
 function install_ii() {
-    echo Installing hans_rust (ER301, Txo, etc)
+    echo "Installing hans_rust (ER301, Txo, etc)"
     cd /home/pi
     git clone https://github.com/nordseele/hans_rust.git
     cd /home/pi/hans_rust
@@ -73,7 +73,7 @@ function install_ii() {
 }
 
 function no_services() {
-    echo Disabling services
+    echo "Disabling services"
     sudo systemctl disable hans.service
     sudo systemctl disable hans_ii_midi.service
     sudo systemctl disable ttymidi.service
