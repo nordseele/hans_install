@@ -20,7 +20,7 @@ function install_dependencies() {
 
     #MIDI 
 
-    if [[ -d /tty ]]
+    if [[ -d /home/pi/tty ]]
     then
         sudo rm -f -R /home/pi/tty
     fi
