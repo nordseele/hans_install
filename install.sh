@@ -53,7 +53,6 @@ function install_dependencies() {
     sudo raspi-config nonint do_i2c 0
     sudo cp /home/pi/hans_install/files/config.txt /boot/config.txt
 
-    sudo raspi-config nonint do_hostname hans
     sudo raspi-config nonint do_expand_rootfs
 
     sudo sed -i 's/console=serial0,115200 //' /boot/cmdline.txt
@@ -79,7 +78,7 @@ function install_iimidi() {
 
 function install_ii() {
     echo "Installing hans_rust - ER301, Txo, etc"
-    
+
     #RUST
     if which rustc > /dev/null
     then

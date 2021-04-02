@@ -13,7 +13,7 @@ Select the 32bit (Lite) Raspberry PI OS. (Other versions -> RPI Lite)
 Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win), this will open a new window, make the following changes:
 
 - Check "Enable SSH" 
-- Change the hostname to "hans.local"
+- Change the hostname to "hans.local" (or another unique name if you have multiple RPi/Hans install on your network)
 - Enter your WIFI network Details
 - Change Locale and country
 - You can leave the hostname to raspberrypi. The install script will modify this to "hans" later. 
