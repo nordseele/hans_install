@@ -34,6 +34,12 @@ Open a terminal window and connect to the Raspberry Pi via SSH. The password is 
 ```shell
 ssh pi@raspberrypi.local 
 ```
+You can modify the password if you wish.
+
+`sudo su`
+`passwd pi`
+`exit`
+
 #### 4) Hans install
 
 ```shell
