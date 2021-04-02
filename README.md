@@ -31,7 +31,7 @@ ssh pi@raspberrypi.local
 #### 4) Hans install
 
 ```shell
-wget https://raw.githubusercontent.com/nordseele/hans_install/master/install.sh
+wget https://raw.githubusercontent.com/nordseele/hans_install/main/install.sh
 chmod +x install.sh && ./install.sh
 ```
 
