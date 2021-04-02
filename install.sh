@@ -16,8 +16,7 @@ function fresh_start() {
 function install_dependencies() {
     echo "Installing dependencies"
     sudo apt-get update
-    PACKAGES="libdbus-1-dev libglib2.0-dev libusb-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev autotools-dev libtool autoconf pigpio amidiauto"
-    sudo apt-get install -y $PACKAGES
+    sudo apt-get install -y libdbus-1-dev libglib2.0-dev libusb-dev libudev-dev libical-dev libreadline-dev libasound2-dev libjack-jackd2-dev autotools-dev libtool autoconf pigpio
 
     #MIDI 
 
