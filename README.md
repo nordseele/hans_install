@@ -13,6 +13,7 @@ Select the 32bit (Lite) Raspberry PI OS. (Other versions -> RPI Lite)
 Before writing the image, type CMD + SHIFT + X (or ctrl + shift + X on Win), this will open a new window, make the following changes:
 
 - Check "Enable SSH" 
+- Change the hostname to "hans.local"
 - Enter your WIFI network Details
 - Change Locale and country
 - You can leave the hostname to raspberrypi. The install script will modify this to "hans" later. 
@@ -32,7 +33,7 @@ It may take a few minutes the first time until the Pi shows up on the network.
 Open a terminal window and connect to the Raspberry Pi via SSH. The password is "raspberry".
 
 ```shell
-ssh pi@raspberrypi.local 
+ssh hans.local 
 ```
 You can modify the password if you wish.
 
