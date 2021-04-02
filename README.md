@@ -43,7 +43,7 @@ You can modify the password if you wish.
 #### 4) Hans install
 
 ```shell
-wget https://raw.githubusercontent.com/nordseele/hans_install/main/install.sh
+wget --no-cache https://raw.githubusercontent.com/nordseele/hans_install/main/install.sh
 chmod +x install.sh && ./install.sh
 ```
 
