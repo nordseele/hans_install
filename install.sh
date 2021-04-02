@@ -57,15 +57,6 @@ function install_dependencies() {
     sudo raspi-config nonint do_expand_rootfs
 
     sudo sed -i 's/console=serial0,115200 //' /boot/cmdline.txt
-
-
-    #RUST
-    if which rustc > /dev/null
-    then
-        echo "Rust is already installed, skipping..."
-    else
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-    fi
 }
 
 
@@ -88,6 +79,15 @@ function install_iimidi() {
 
 function install_ii() {
     echo "Installing hans_rust - ER301, Txo, etc"
+    
+    #RUST
+    if which rustc > /dev/null
+    then
+        echo "Rust is already installed, skipping..."
+    else
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+        source $HOME/.cargo/env
+    fi
 
     if [[ -d /home/pi/hans_rust ]]
     then
