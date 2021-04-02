@@ -33,10 +33,17 @@ function install_dependencies() {
 
     cd /home/pi
 
-    // wget https://github.com/antiprism/amidiauto/releases/download/v1.01Raspbian/amidiauto-1.01_buster.deb
-    // sudo apt install ./amidiauto-1.01_buster.deb
-    sudo cp /home/pi/hans_install/files/amidiauto.conf /etc/amidiauto.conf
-    sudo systemctl enable amidiauto
+
+    if which rustc > /dev/null
+    then
+        echo "Amidiauto is already installed, skipping..."
+    else
+        wget https://github.com/antiprism/amidiauto/releases/download/v1.01Raspbian/amidiauto-1.01_buster.deb
+        sudo apt install ./amidiauto-1.01_buster.deb
+        sudo cp /home/pi/hans_install/files/amidiauto.conf /etc/amidiauto.conf
+        sudo systemctl enable amidiauto
+    fi
+  
 
     sudo cp /home/pi/hans_install/files/ttymidi.service /etc/systemd/system/ttymidi.service
     sudo systemctl enable ttymidi.service
