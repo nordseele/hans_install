@@ -22,7 +22,7 @@ Press the "Write" button to start writing the image to your SD. It will take a f
 
 At the end of the process, RPI imager will unmount the card. 
 
-Put it in the Raspberry Pi and power the Pi up. 
+Put it in the Raspberry Pi and power the Pi on. 
 
 Note: Don't try to remove the Pi from its 3d printed case when the SD card is still present in the slot. You may damage it.
 
